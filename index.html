@@ -17,37 +17,50 @@
                 <ul>
                     Mums bus vajadzigi jusu kredit kartes dati
                 </ul>
-                <li>
+                <ul>
                     <a href = 'spele.html'>
-                       Play
+                       Game
                     </a>
-                </li>
-                <li>
+                </ul>
+                <ul>
                     <a href = 'par.html'>
                        FAQ
                     </a>
-                </li>
-                <li>
+                </ul>
+                <ul>
                     <a href = 'top.html'>
                        Leaderboard
                     </a>
-                </li>
+                </ul>
             </h1>
         </div>
         <div class = 'content'>
-            <h3 class = 'noteikumi'>nepamanams teksts</h3>
+            <h3 class = 'noteikumi'>Registracijas Dati:</h3>
 
             Vards: <input id = 'vards'>
             <br>
             Vecums: <input id = 'vecums'>
             <br>
-            Region: <select id="regions">
-                <option>America</option>
-                <option>Asia</option>
-                <option>Europe</option>
-                <option>Japan</option>
-                <option>Global</option>
+            Region: <select id="region">
+                <option value="America">America</option>
+                <option value="Asia">Asia</option>
+                <option value="Europe">Europe</option>
+                <option value="Japan">Japan</option>
+                <option value="Global">Global</option>
             </select>
+            <button onclick="startGame()">Play</button>
         </div>
     </div>
+    <script>
+        function startGame()
+        {
+            let vards = document.querySelector('#vards').value
+            let vecums = document.querySelector('#vecums').value
+            let region = document.querySelector('#region').value
+            console.log(vards,vecums,region)
+            
+
+            window.location = "spele.html#"+vards+','+vecums+','+region
+        }
+    </script>
 </body>
